@@ -1,0 +1,29 @@
+<html>
+   <head>
+   </head>
+   <body>
+     {% load static%} 
+     
+     {%block css_files%} 
+    <link rel="stylesheet" href="{% static "resumebuilder/input.css"%}"> 
+    {%endblock%}
+
+    <h1>Enter the details<h1>
+  
+<form action='index' method="post" enctype="multipart/form-data">
+   
+   {% csrf_token %}
+  
+  Enter the first name:<input type='text' name="fname">
+  Enter the Second name:<input type='text' name="lname">
+  <br/>
+ 
+  <input type="submit" value="Submit">
+  
+  
+  <br/>
+</form>
+   <h3>{{text}}</h3>
+   
+</body>
+</html>
